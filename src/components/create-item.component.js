@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 
 export default class CreateItem extends Component {
   constructor(props) {
@@ -8,9 +9,6 @@ export default class CreateItem extends Component {
       item_priority: 'Low',
       item_completed: false
     }
-    // this.onChangeItemDescription = this.onChangeItemDescription.bind(this);
-    // this.onChangeItemPriority = this.onChangeItemPriority.bind(this);
-    // this.onSubmit = this.onSubmit.bind(this);
   }
 
   onChangeItemDescription = (event) => {
@@ -26,10 +24,25 @@ export default class CreateItem extends Component {
   };
 
   onSubmit = (event) => {
-    event.preventDefaultl();
+    // event.preventDefaultl();
     console.log('submitted');
     console.log(`item-desc: ${this.state.item_description}`);
     console.log(`item-prio: ${this.state.item_priority}`);
+
+    const newItem = {
+      item_description: this.state.item_description,
+      item_priority: this.state.item_priority,
+      item_completed: this.state.item_completed
+    };
+
+    axios.post('http://localhost:4000/items/add', newItem)
+      .then(res => console.log(res.data));
+
+    this.setState({
+      item_description: '',
+      item_priority: 'Low',
+      item_completed: false
+    });
   };
 
   render() {
