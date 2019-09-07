@@ -14,17 +14,15 @@ class App extends Component {
         <div className='main-container'>
           <nav className='navbar'>
             <a className='navbar-brand'>
-              <img src='./checkmark.jpg' alt='checkmark'/>
+              <img className='navbar-img' src='./checkmark.jpg' alt='checkmark'/>
             </a>
-            <Link to='/' className='navbar-logo'>Groc-List App</Link>
-            <ul className='navbar-elements'>
-              <li className='navbar-item'>
-                <Link to='/' className='nav-link'>ITEMS</Link>
-              </li>
-              <li className='navbar-item'>
-                <Link to='/create' className='nav-link'>ADD ITEM</Link>
-              </li>
-            </ul>
+            <Link to='/' className='navbar-logo'>Groc-List</Link>
+            <a className='navbar-item'>
+              <Link to='/' className='nav-link'>ITEMS</Link>
+            </a>
+            <a className='navbar-item'>
+              <Link to='/create' className='nav-link'>ADD ITEM</Link>
+            </a>
           </nav>
 
           <Route path="/" exact component={ItemList} />
