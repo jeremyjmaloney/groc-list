@@ -5,6 +5,8 @@ html {
 body {
   padding: 0px;
   margin: 0px;
+  background-color: #4b4b4c;
+  font-family: 'Caveat', cursive;
 }
 .main-container {
   width: 100%;
@@ -14,6 +16,10 @@ body {
   background-color: #c6c6c6;
   display: flex;
   justify-content: space-around;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 .navbar-img {
   width: 50px;
@@ -33,4 +39,56 @@ body {
 }
 a {
   text-decoration: none;
+}
+h4 {
+  color: black;
+  margin: 10px;
+  font-size: 1.5em;
+  position: absolute;
+  left: 6%;
+}
+.items-list {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding-top: 50px;
+}
+.completed {
+  text-decoration: line-through;
+}
+.item, .completed-item {
+  height: 50px;
+  width: 90%;
+  margin: 0 auto;
+  border: 2px solid #199778;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.item {
+  background-color: #1ed2ae;
+}
+.completed-item {
+  border: none;
+}
+button {
+  border: none;
+  background-color: #c6c6c6;
+  font-size: 1em;
+  font-family: 'Caveat', cursive;
+}
+button:hover {
+  background-color: #1ed2ae;
+  border-radius: 8px;
+}
+.edit {
+  color: black;
+  position: absolute;
+  right: 10%;
+  padding-top: 15px;
+}
+.edit-container {
+  padding-top: 50px;
+}
+.create-form {
+  padding-top: 50px;
 }

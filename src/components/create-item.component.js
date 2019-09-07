@@ -48,7 +48,7 @@ export default class CreateItem extends Component {
   render() {
     return (
       <div className='create-form'>
-        <h2>ADD NEW ITEM</h2>
+        <h1>ADD NEW ITEM</h1>
         <form onSubmit={this.onSubmit}>
           <label>ITEM: </label>
           <input type='text' value={this.state.item_description} onChange={this.onChangeItemDescription} />

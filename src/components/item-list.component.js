@@ -21,13 +21,13 @@ export default class ItemList extends Component {
 
   render() {
     return (
-      <div>
+      <div className='items-list'>
         <h1>ITEMS LIST</h1>
         {this.state.items.map((item, index) => {
           return (
-            <div className='item' key={index}>
-              <h4>{item.item_description}</h4>
-              <Link to={`/edit/${item._id}`}>Edit</Link>
+            <div className={item.item_completed ? 'completed-item' : 'item'} key={index}>
+              <h4 className={item.item_completed ? 'completed' : ''}>{index + 1}. {item.item_description}</h4>
+              <Link className='edit' to={`/edit/${item._id}`}>EDIT</Link>
             </div>
           )
         })}
