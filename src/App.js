@@ -16,7 +16,7 @@ class App extends Component {
             <a className='navbar-brand'>
               <img className='navbar-img' src='./checkmark.jpg' alt='checkmark'/>
             </a>
-            <Link to='/' className='navbar-logo'>Groc-List</Link>
+            <Link to='/' className='navbar-logo'>GROC-LIST</Link>
             <a className='navbar-item'>
               <Link to='/' className='nav-link'>ITEMS</Link>
             </a>
