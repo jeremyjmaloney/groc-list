@@ -4,6 +4,7 @@ import axios from 'axios';
 
 export default class ItemList extends Component {
   updated = true;
+  showDelete = true;
   constructor(props) {
     super(props)
     this.state = {
@@ -15,6 +16,9 @@ export default class ItemList extends Component {
     if(this.updated === true) {
       axios.get('http://localhost:4000/items')
       .then(response => {
+        if(response.data.length === 0) {
+          this.showDelete = false;
+        }
         console.log(response.data);
         this.setState({
           items: response.data
@@ -31,6 +35,7 @@ export default class ItemList extends Component {
         items: []
       })
     });
+    this.showDelete = false;
   };
 
   componentDidUpdate() {
@@ -56,7 +61,7 @@ export default class ItemList extends Component {
             </div>
           )
         })}
-        {this.state.showDelete ? <button className='delete-btn' onClick={this.deleteList}>DELETE LIST</button> : null}
+        {this.showDelete ? <button className='delete-btn' onClick={this.deleteList}>DELETE LIST</button> : null}
       </div>
     )
   }
