@@ -67,6 +67,7 @@ h4 {
   background-color: #c6c6c6;
   width: 90%;
   border-radius: 8px;
+  box-shadow: 0 0 10px #1ed2ae;
 }
 .items-list {
   overflow-y: scroll;
