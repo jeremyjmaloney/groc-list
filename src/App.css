@@ -29,10 +29,10 @@ body {
   font-size: 1.5em;
   font-weight: bold;
   color: #4b4b4c;
-  padding: 3%;
+  padding: 10px;
 }
 .navbar-item {
-  padding: 4%;
+  padding: 10px;
 }
 .nav-link {
   color: #676767;
