@@ -41,6 +41,15 @@ export default class EditItem extends Component {
     this.props.history.push('/');
   }
 
+  handleDelete = (event) => {
+    event.preventDefault();
+    axios.delete(`http://localhost:4000/items/${this.props.match.params.id}`)
+      .then(response => {
+        console.log(response.data);
+      });
+    this.props.history.push('/');
+  }
+
   componentDidMount() {
     axios.get(`http://localhost:4000/items/${this.props.match.params.id}`)
       .then((response) => {
@@ -74,6 +83,7 @@ export default class EditItem extends Component {
 
           <input className='submit-btn' type='submit' value='SUBMIT' />
         </form>
+        <button className='delete-btn' onClick={this.handleDelete}>DELETE</button>
       </div>
     )
   }
