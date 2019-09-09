@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 
 export default class ItemList extends Component {
-  _isMounted = false;
+  updated = true;
   constructor(props) {
     super(props)
     this.state = {
@@ -12,37 +12,34 @@ export default class ItemList extends Component {
   }
 
   getItems = () => {
-    axios.get('http://localhost:4000/items')
+    if(this.updated === true) {
+      axios.get('http://localhost:4000/items')
       .then(response => {
-        if(this._isMounted) {
-          this.setState({
-            items: response.data
-          });
-        }
+        console.log(response.data);
+        this.setState({
+          items: response.data
+        });
       });
+    };
   };
 
   deleteList = () => {
     axios.delete('http://localhost:4000/items')
-      .then(response => {
-        console.log(response.data);
-        this.setState({
-          items: []
-        })
-      });
-  }
+    .then(response => {
+      console.log(response.data);
+      this.setState({
+        items: []
+      })
+    });
+  };
 
   componentDidUpdate() {
     this.getItems();
-  }
+    this.updated = false;
+  };
 
   componentDidMount() {
-    this._isMounted = true;
     this.getItems();
-  }
-
-  componentWillUnmount() {
-    this._isMounted = false;
   }
 
   render() {
@@ -59,7 +56,7 @@ export default class ItemList extends Component {
             </div>
           )
         })}
-        <button className='delete-btn' onClick={this.deleteList}>DELETE LIST</button>
+        {this.state.showDelete ? <button className='delete-btn' onClick={this.deleteList}>DELETE LIST</button> : null}
       </div>
     )
   }
