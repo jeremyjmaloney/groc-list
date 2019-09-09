@@ -95,10 +95,10 @@ button:hover {
 .edit {
   color: black;
   position: absolute;
-  right: 10%;
-  padding: 15px;
+  right: 5%;
+  padding: 14px 20px;
   background-color: #c6c6c6;
-  border-radius: 50%;
+  border-radius: 8px;;
   border: 1px solid #199778;
 }
 .edit-container {
@@ -121,6 +121,7 @@ input[type='text'] {
   font-size: 2em;
   border-radius: 8px;
   border: 1px solid #1ed2ae;
+  background-color: #c6c6c6;
 }
 input[type='radio'] {
   height: 30px;
