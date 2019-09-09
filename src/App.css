@@ -60,6 +60,7 @@ h4 {
 }
 .completed {
   text-decoration: line-through;
+  text-shadow: none;
 }
 .item, .completed-item {
   height: 50px;
@@ -82,13 +83,13 @@ h4 {
   border-radius: 8px;
   background-color: #E12D51;
 }
-button {
+.navbar-item {
   border: none;
   background-color: #c6c6c6;
   font-size: 1em;
   font-family: 'Caveat', cursive;
 }
-button:hover {
+.navbar-item:hover {
   background-color: #1ed2ae;
   border-radius: 8px;
 }

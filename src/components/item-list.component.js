@@ -20,6 +20,16 @@ export default class ItemList extends Component {
           });
         }
       });
+  };
+
+  deleteList = () => {
+    axios.delete('http://localhost:4000/items')
+      .then(response => {
+        console.log(response.data);
+        this.setState({
+          items: []
+        })
+      });
   }
 
   componentDidUpdate() {
@@ -49,6 +59,7 @@ export default class ItemList extends Component {
             </div>
           )
         })}
+        <button className='delete-btn' onClick={this.deleteList}>DELETE LIST</button>
       </div>
     )
   }
