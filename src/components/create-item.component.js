@@ -51,9 +51,9 @@ export default class CreateItem extends Component {
         <h1>ADD ITEM</h1>
         <form onSubmit={this.onSubmit}>
           <label>ITEM: </label>
-          <input type='text' value={this.state.item_description} onChange={this.onChangeItemDescription} /><br />
+          <input type='text' value={this.state.item_description} onChange={this.onChangeItemDescription} autoFocus/><br />
 
-          <label>PRIORITY</label>
+          <label>PRIORITY: </label>
           <input type='radio' name='priorityOptions' id='priorityLow' value='Low' checked={this.state.item_priority==='Low'} onChange={this.onChangeItemPriority} />
           <label>LOW</label>
 
