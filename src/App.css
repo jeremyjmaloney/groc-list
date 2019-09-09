@@ -53,6 +53,13 @@ h4 {
   position: absolute;
   left: 6%;
 }
+.welcome {
+  text-align: center;
+  margin: 0 auto;
+  background-color: #c6c6c6;
+  width: 90%;
+  border-radius: 8px;
+}
 .items-list {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;

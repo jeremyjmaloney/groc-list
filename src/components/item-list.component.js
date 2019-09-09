@@ -62,6 +62,14 @@ export default class ItemList extends Component {
           )
         })}
         {this.showDelete ? <button className='delete-btn' onClick={this.deleteList}>DELETE LIST</button> : null}
+        {!this.showDelete ?
+          <div className='welcome'>
+            <h2>WELCOME TO GROC-LIST!</h2>
+            <h3>CLICK ON ADD ITEM IN THE TOP RIGHT</h3>
+            <h3>HAND CORNER AND START BUILDING</h3>
+            <h3>YOUR GROC-LIST! ENJOY GROC-LIST!!</h3>
+          </div> : null
+        }
       </div>
     )
   }
