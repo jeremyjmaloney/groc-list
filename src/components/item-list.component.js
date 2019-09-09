@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 
 export default class ItemList extends Component {
+  _isMounted = false;
   constructor(props) {
     super(props)
     this.state = {
@@ -10,13 +11,28 @@ export default class ItemList extends Component {
     }
   }
 
-  componentDidMount() {
+  getItems = () => {
     axios.get('http://localhost:4000/items')
       .then(response => {
-        this.setState({
-          items: response.data
-        })
-      })
+        if(this._isMounted) {
+          this.setState({
+            items: response.data
+          });
+        }
+      });
+  }
+
+  componentDidUpdate() {
+    this.getItems();
+  }
+
+  componentDidMount() {
+    this._isMounted = true;
+    this.getItems();
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
   }
 
   render() {

@@ -7,7 +7,7 @@ export default class EditItem extends Component {
     this.state = {
       item_description: '',
       item_priority: 'Low',
-      item_completed: false
+      item_completed: ''
     }
   }
 
@@ -30,12 +30,12 @@ export default class EditItem extends Component {
   };
 
   onSubmit = (event) => {
+    event.preventDefault();
     const item = {
       item_description: event.target.value,
       item_priority: event.target.value,
       item_completed: this.state.item_completed
     };
-    console.log(item);
     axios.post(`http://localhost:4000/items/update/${this.props.match.params.id}`, item)
       .then(response => console.log(response.data));
     this.props.history.push('/');
