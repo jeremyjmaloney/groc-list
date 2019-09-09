@@ -84,9 +84,9 @@ export default class EditItem extends Component {
           <label className='checkbox'>GOT IT: </label>
           <input type='checkbox' name='completedCheckbox' id='completedCheckbox' className='checkbox' onChange={this.onChangeItemCompleted} checked={this.state.item_completed} value={this.state.item_completed} /><br />
 
-          <input className='submit-btn' type='submit' value='UPDATE' />
+          <button className='update-btn' type='submit' value='UPDATE'>UPDATE</button>
         </form>
-        <button className='delete-btn' onClick={this.handleDelete}>DELETE</button>
+        <button className='delete-btn' onClick={this.handleDelete}>DELETE ITEM</button>
       </div>
     )
   }

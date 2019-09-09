@@ -48,19 +48,19 @@ export default class CreateItem extends Component {
   render() {
     return (
       <div className='create-form'>
-        <h1>ADD NEW ITEM</h1>
+        <h1>ADD ITEM</h1>
         <form onSubmit={this.onSubmit}>
           <label>ITEM: </label>
-          <input type='text' value={this.state.item_description} onChange={this.onChangeItemDescription} />
+          <input type='text' value={this.state.item_description} onChange={this.onChangeItemDescription} /><br />
 
           <label>PRIORITY</label>
           <input type='radio' name='priorityOptions' id='priorityLow' value='Low' checked={this.state.item_priority==='Low'} onChange={this.onChangeItemPriority} />
           <label>LOW</label>
 
           <input type='radio' name='priorityOptions' id='priorityHigh' value='High' checked={this.state.item_priority==='High'} onChange={this.onChangeItemPriority} />
-          <label>HIGH</label>
+          <label>HIGH</label><br />
 
-          <input className='submit-btn' type='submit' value='ADD ITEM' />
+          <input className='update-btn' type='submit' value='ADD ITEM' />
         </form>
       </div>
     )

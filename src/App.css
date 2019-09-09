@@ -40,8 +40,14 @@ body {
 a {
   text-decoration: none;
 }
+h1 {
+  font-size: 3em;
+  color: #1ed2ae;
+  text-shadow: 1px 1px white;
+}
 h4 {
   color: black;
+  text-shadow: 1px 1px white;
   margin: 10px;
   font-size: 1.5em;
   position: absolute;
@@ -119,4 +125,14 @@ input[type='text'] {
 input[type='radio'] {
   height: 30px;
   width: 30px;
+}
+.update-btn, .delete-btn {
+  font-size: 2em;
+  background-color: #1ed2ae;
+  border: 2px solid black;
+  border-radius: 8px;
+  margin: 5px;
+}
+.delete-btn {
+  background-color: #E12D51;
 }
