@@ -159,6 +159,7 @@ input[type='radio'] {
   border-radius: 8px;
   margin: 5px;
   margin-top: 15px;
+  font-family: 'Caveat', cursive;
 }
 .delete-btn {
   background-color: #E12D51;
