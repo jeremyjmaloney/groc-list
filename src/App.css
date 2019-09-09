@@ -70,6 +70,12 @@ h4 {
 .completed-item {
   border: none;
 }
+.high {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #E12D51;
+}
 button {
   border: none;
   background-color: #c6c6c6;
@@ -84,11 +90,33 @@ button:hover {
   color: black;
   position: absolute;
   right: 10%;
-  padding-top: 15px;
+  padding: 15px;
+  background-color: #c6c6c6;
+  border-radius: 50%;
+  border: 1px solid #199778;
 }
 .edit-container {
   padding-top: 50px;
 }
 .create-form {
   padding-top: 50px;
+}
+label {
+  font-size: 2em;
+  margin: 5px;
+}
+.checkbox {
+  height: 40px;
+  width: 40px;
+  font-size: 3em;
+  color: #1ed2ae;
+}
+input[type='text'] {
+  font-size: 2em;
+  border-radius: 8px;
+  border: 1px solid #1ed2ae;
+}
+input[type='radio'] {
+  height: 30px;
+  width: 30px;
 }

@@ -42,8 +42,10 @@ export default class ItemList extends Component {
         {this.state.items.map((item, index) => {
           return (
             <div className={item.item_completed ? 'completed-item' : 'item'} key={index}>
-              <h4 className={item.item_completed ? 'completed' : ''}>{index + 1}. {item.item_description}</h4>
-              <Link className='edit' to={`/edit/${item._id}`}>EDIT</Link>
+              <div className={item.item_priority === 'High' ? 'high' : ''}>
+                <h4 className={item.item_completed ? 'completed' : ''}>{index + 1}. {item.item_description}</h4>
+                <Link className='edit' to={`/edit/${item._id}`}>EDIT</Link>
+              </div>
             </div>
           )
         })}

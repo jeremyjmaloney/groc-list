@@ -6,7 +6,7 @@ export default class EditItem extends Component {
     super(props)
     this.state = {
       item_description: '',
-      item_priority: 'Low',
+      item_priority: '',
       item_completed: ''
     }
   }
@@ -18,22 +18,25 @@ export default class EditItem extends Component {
   };
 
   onChangeItemPriority = (event) => {
+    console.log(this.state.item_priority);
     this.setState({
       item_priority: event.target.value
     });
+    console.log(this.state.item_priority);
   };
 
   onChangeItemCompleted = (event) => {
     this.setState({
-      item_completed: !this.state.item_completed
+      item_completed: !this.state.item_completed,
+      item_priority: 'Low'
     });
   };
 
   onSubmit = (event) => {
     event.preventDefault();
     const item = {
-      item_description: event.target.value,
-      item_priority: event.target.value,
+      item_description: this.state.item_description,
+      item_priority: this.state.item_priority,
       item_completed: this.state.item_completed
     };
     axios.post(`http://localhost:4000/items/update/${this.props.match.params.id}`, item)
@@ -69,19 +72,19 @@ export default class EditItem extends Component {
         <h1>EDIT ITEM</h1>
         <form onSubmit={this.onSubmit}>
           <label>ITEM: </label>
-          <input type='text' value={this.state.item_description} onChange={this.onChangeItemDescription} />
+          <input type='text' value={this.state.item_description} onChange={this.onChangeItemDescription} /><br />
 
-          <label>PRIORITY</label>
+          <label>PRIORITY: </label>
           <input type='radio' name='priorityOptions' id='priorityLow' value='Low' checked={this.state.item_priority==='Low'} onChange={this.onChangeItemPriority} />
           <label>LOW</label>
 
           <input type='radio' name='priorityOptions' id='priorityHigh' value='High' checked={this.state.item_priority==='High'} onChange={this.onChangeItemPriority} />
-          <label>HIGH</label>
+          <label>HIGH</label><br />
 
-          <label>Completed</label>
-          <input type='checkbox' name='completedCheckbox' id='completedCheckbox' onChange={this.onChangeItemCompleted} checked={this.state.item_completed} value={this.state.item_completed} />
+          <label className='checkbox'>GOT IT: </label>
+          <input type='checkbox' name='completedCheckbox' id='completedCheckbox' className='checkbox' onChange={this.onChangeItemCompleted} checked={this.state.item_completed} value={this.state.item_completed} /><br />
 
-          <input className='submit-btn' type='submit' value='SUBMIT' />
+          <input className='submit-btn' type='submit' value='UPDATE' />
         </form>
         <button className='delete-btn' onClick={this.handleDelete}>DELETE</button>
       </div>
