@@ -26,19 +26,15 @@ export default class CreateItem extends Component {
 
   onSubmit = (event) => {
     // event.preventDefaultl();
-    console.log('submitted');
-    console.log(`item-desc: ${this.state.item_description}`);
-    console.log(`item-prio: ${this.state.item_priority}`);
-
-    const newItem = {
+    axios.post(`${URL}/items/add`, {
       item_description: this.state.item_description,
       item_priority: this.state.item_priority,
       item_completed: this.state.item_completed
-    };
-
-    axios.post(`${URL}/items/add`, newItem)
-      .then(res => console.log(res.data));
-
+    }).then((response) => {
+      console.log(response.data);
+    }, (error) => {
+      console.log(error);
+    });
     this.setState({
       item_description: '',
       item_priority: 'Low',
