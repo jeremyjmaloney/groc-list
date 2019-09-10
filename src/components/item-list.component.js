@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
-const URL = 'https://groc-list-backend.herokuapp.com';
+// const URL = 'https://groc-list-backend.herokuapp.com';
 
 export default class ItemList extends Component {
   updated = true;
@@ -15,7 +15,7 @@ export default class ItemList extends Component {
 
   getItems = () => {
     if(this.updated === true) {
-      axios.get(`https://groc-list-backend.herokuapp.com/items`)
+      axios.get(`http://localhost:4000/items`)
       .then(response => {
         if(response.data.length === 0) {
           this.showDelete = false;
@@ -29,7 +29,7 @@ export default class ItemList extends Component {
   };
 
   deleteList = () => {
-    axios.delete(`${URL}/items`)
+    axios.delete(`http://localhost:4000/items`)
     .then(response => {
       console.log(response.data);
       this.setState({
