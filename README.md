@@ -2,7 +2,9 @@
 
 https://groc-list.herokuapp.com/
 
-![GROC-LIST](https://github.com/jeremyjmaloney/groc-list/blob/master/images/GROC-LIST.png)
+![GROC-LIST](https://github.com/jeremyjmaloney/groc-list/blob/master/images/GROC-LIST.png){:width="200px"}
+![GROC-LIST](https://github.com/jeremyjmaloney/groc-list/blob/master/images/ADD-ITEM.png){:width="200px"}
+![GROC-LIST](https://github.com/jeremyjmaloney/groc-list/blob/master/images/EDIT-ITEM.png){:width="200px"}
 
 # DESCRIPTION
 
@@ -10,7 +12,7 @@ https://groc-list.herokuapp.com/
 
 # TECHNOLOGIES USED
 
-- MongoDB, Express.js, React.js, Node.js, and axios.
+- MongoDB, Express.js, React.js, React Router, Node.js, and axios.
 - Deployed on: Heroku.
 
 # WHAT DO I DO WITH IT?
