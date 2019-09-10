@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+const URL = 'https://groc-list-backend.herokuapp.com';
 
 export default class EditItem extends Component {
   constructor(props) {
@@ -39,14 +40,14 @@ export default class EditItem extends Component {
       item_priority: this.state.item_priority,
       item_completed: this.state.item_completed
     };
-    axios.post(`http://localhost:4000/items/update/${this.props.match.params.id}`, item)
+    axios.post(`${URL}/items/update/${this.props.match.params.id}`, item)
       .then(response => console.log(response.data));
     this.props.history.push('/');
   }
 
   handleDelete = (event) => {
     event.preventDefault();
-    axios.delete(`http://localhost:4000/items/${this.props.match.params.id}`)
+    axios.delete(`${URL}/items/${this.props.match.params.id}`)
       .then(response => {
         console.log(response.data);
       });
@@ -54,7 +55,7 @@ export default class EditItem extends Component {
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:4000/items/${this.props.match.params.id}`)
+    axios.get(`${URL}/items/${this.props.match.params.id}`)
       .then((response) => {
         this.setState({
           item_description: response.data.item_description,
