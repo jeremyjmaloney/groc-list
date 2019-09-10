@@ -15,7 +15,7 @@ export default class ItemList extends Component {
 
   getItems = () => {
     if(this.updated === true) {
-      axios.get(`${URL}/items`)
+      axios.get(`https://groc-list-backend.herokuapp.com/items`)
       .then(response => {
         if(response.data.length === 0) {
           this.showDelete = false;
