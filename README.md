@@ -10,7 +10,7 @@ https://groc-list.herokuapp.com/
 
 # TECHNOLOGIES USED
 
-- MongoDB, Express.js, React.js, React Router, Node.js, and axios.
+- MongoDB, Express.js, React.js, React Router, Node.js, axios, JSX, and CSS for styling.
 - Deployed on: Heroku.
 
 # WHAT DO I DO WITH IT?
