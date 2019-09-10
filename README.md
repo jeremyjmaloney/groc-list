@@ -2,13 +2,11 @@
 
 https://groc-list.herokuapp.com/
 
-<img src="https://github.com/jeremyjmaloney/groc-list/blob/master/images/GROC-LIST.png" width="200px" height="auto" display="inline">
+<!-- <img src="https://github.com/jeremyjmaloney/groc-list/blob/master/images/GROC-LIST.png" width="200px" height="auto" display="inline">
 <img src="https://github.com/jeremyjmaloney/groc-list/blob/master/images/ADD-ITEM.png" width="200px" height="auto" display="inline">
-<img src="https://github.com/jeremyjmaloney/groc-list/blob/master/images/EDIT-ITEM.png" width="200px" height="auto" display="inline">
+<img src="https://github.com/jeremyjmaloney/groc-list/blob/master/images/EDIT-ITEM.png" width="200px" height="auto" display="inline"> -->
 
-<!-- ![GROC-LIST](https://github.com/jeremyjmaloney/groc-list/blob/master/images/GROC-LIST.png | width=200)
-![GROC-LIST](https://github.com/jeremyjmaloney/groc-list/blob/master/images/ADD-ITEM.png | width=200)
-![GROC-LIST](https://github.com/jeremyjmaloney/groc-list/blob/master/images/EDIT-ITEM.png | width=200) -->
+![GROC-LIST](https://github.com/jeremyjmaloney/groc-list/blob/master/images/GROC-LIST.png) ![GROC-LIST](https://github.com/jeremyjmaloney/groc-list/blob/master/images/ADD-ITEM.png) ![GROC-LIST](https://github.com/jeremyjmaloney/groc-list/blob/master/images/EDIT-ITEM.png)
 
 # DESCRIPTION
 
