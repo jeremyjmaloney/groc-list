@@ -2,7 +2,7 @@
 
 https://groc-list.herokuapp.com/
 
-<img src="https://github.com/jeremyjmaloney/groc-list/blob/master/images/GROC-LIST.png" width="300px" height="auto"> <img src="https://github.com/jeremyjmaloney/groc-list/blob/master/images/ADD-ITEM.png" width="300px" height="auto"> <img src="https://github.com/jeremyjmaloney/groc-list/blob/master/images/EDIT-ITEM.png" width="300px" height="auto">
+<img src="https://github.com/jeremyjmaloney/groc-list/blob/master/images/GROC-LIST.png" width="225px" height="auto"> <img src="https://github.com/jeremyjmaloney/groc-list/blob/master/images/ADD-ITEM.png" width="225px" height="auto"> <img src="https://github.com/jeremyjmaloney/groc-list/blob/master/images/EDIT-ITEM.png" width="225px" height="auto">
 
 # DESCRIPTION
 
