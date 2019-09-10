@@ -25,7 +25,7 @@ export default class CreateItem extends Component {
   };
 
   onSubmit = (event) => {
-    // event.preventDefaultl();
+    event.preventDefaultl();
     console.log('submitted');
     console.log(`item-desc: ${this.state.item_description}`);
     console.log(`item-prio: ${this.state.item_priority}`);
