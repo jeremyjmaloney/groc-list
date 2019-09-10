@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-// const URL = 'https://groc-list-backend.herokuapp.com';
+const URL = 'https://groc-list-backend.herokuapp.com';
 
 export default class CreateItem extends Component {
   constructor(props) {
@@ -36,7 +36,7 @@ export default class CreateItem extends Component {
       item_completed: this.state.item_completed
     };
 
-    axios.post(`http://localhost:4000/items/add`, newItem)
+    axios.post(`${URL}/items/add`, newItem)
       .then(res => console.log(res.data));
 
     this.setState({
