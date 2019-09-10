@@ -35,13 +35,15 @@ export default class EditItem extends Component {
 
   onSubmit = (event) => {
     event.preventDefault();
-    const item = {
+    axios.post(`${URL}/items/update/${this.props.match.params.id}`, {
       item_description: this.state.item_description,
       item_priority: this.state.item_priority,
       item_completed: this.state.item_completed
-    };
-    axios.post(`${URL}/items/update/${this.props.match.params.id}`, item)
-      .then(response => console.log(response.data));
+    }).then((response) => {
+      console.log(response.data);
+    }, (error) => {
+      console.log(error);
+    });
     this.props.history.push('/');
   }
 
@@ -61,10 +63,10 @@ export default class EditItem extends Component {
           item_description: response.data.item_description,
           item_priority: response.data.item_priority,
           item_completed: response.data.item_completed
-        })
+        });
       }, (error) => {
         console.log(error);
-      })
+      });
   }
 
   render() {
